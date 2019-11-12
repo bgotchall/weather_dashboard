@@ -1,95 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Add icon library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
-    <link rel="stylesheet" type="text/css" href="normalize.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <title>Weather dashboard</title>
-    <link rel="shortcut icon" href="./hot.png" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12" id="header-bar">
-          <h1>Weather Dashboard</h1>
-        </div>
+  <link rel="stylesheet" type="text/css" href="normalize.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title>Weather dashboard</title>
+  <link rel="shortcut icon" href="./hot.png" />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12" id="header-bar">
+        <h1>Weather Dashboard</h1>
       </div>
-      <div class="row">
-        <div class="col-4" id="search-column">
-          <form class="form-inline">
-            <label class="sr-only" for="city-search">Search for a City:</label>
-            <input
-              type="text"
-              class="form-control mb-2 mr-sm-2"
-              id="city-search"
-            />
-            <button
-              type="submit"
-              class="btn btn-primary mb-2"
-              id="search-button"
-            >
-              <i class="fa fa-search"></i>
-            </button>
-          </form>
+    </div>
+    <div class="row">
+      <div class="col-sm-4" id="search-column">
+        <form class="form-inline">
+          <label class="sr-only" for="city-search">Search for a City:</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="city-search" />
+          <button type="submit" class="btn btn-primary mb-2" id="search-button">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
 
-          <table class="table" id="search-table">
-            <tbody>
-              <tr>
-                <td>Austin</td>
-              </tr>
-              <tr>
-                <td>San Francisco</td>
-              </tr>
-            </tbody>
-          </table>
+        <table class="table" id="search-table">
+          <tbody>
+            <tr>
+              <td>Austin</td>
+            </tr>
+            <tr>
+              <td>Chicago</td>
+            </tr>
+            <tr>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Orlando</td>
+            </tr>
+            <tr>
+              <td>San Francisco</td>
+            </tr>
+            <tr>
+              <td>Seattle</td>
+            </tr>
+            <tr>
+              <td>Denver</td>
+            </tr>
+            <tr>
+              <td>Atlanta</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-8" id="dashboard-column">
+        <div class="row" id="current-weather-card">
+          <div class="col">
+            <div class="row">
+              <div class="col-sm-12">
+                <h3 id="city-headline"><span  id="city-name">Atlanta</span> <span  id="todays-date">(1/1/2019)</span></h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <p>Temperature: <span  id="temperature">12</span></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <p>Humidity: <span  id="humidity">12</span></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <p>Wind Speed: <span  id="wind-speed">12</span></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <p>UV Index: <span class="badge badge-danger" id="uv-index">12</span></p>
+              </div>
+            </div>
+          </div>
+
+
 
 
         </div>
-        <div class="col-8" id="dashboard-column">
-          <div class="row" id="current-weather-card">
-            <h3>Atlanta (1/1/2019)</h3>
-            <p>Temperature: 71</p>
+        <div class="row">
+          <div class="col">
+            <h5>5 Day Forecast:</h5>
           </div>
-          <div class="row">
-            
+        </div>
+        <div class="row">
+
+          <div class="col forecast-cards">
+            <h5>8/19/19</h5>
+            <p>Icon</p>
+            <p>Temperature</p>
+            <p>Humidity</p>
           </div>
+          <div class="col forecast-cards">
+            <h5>5 cards:</h5>
+          </div>
+          <div class="col forecast-cards">
+            <h5>5 cards:</h5>
+          </div>
+          <div class="col forecast-cards">
+            <h5>5 cards:</h5>
+          </div>
+          <div class="col forecast-cards">
+            <h5>5 cards:</h5>
+          </div>
+
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>
