@@ -28,15 +28,67 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Add icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <title>Weather dashboard</title>
-    <link rel="shortcut icon" href="./hot.png"/>
+    <link rel="shortcut icon" href="./hot.png" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12" id="header-bar">
+          <h1>Weather Dashboard</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-4" id="search-column">
+          <form class="form-inline">
+            <label class="sr-only" for="city-search">Search for a City:</label>
+            <input
+              type="text"
+              class="form-control mb-2 mr-sm-2"
+              id="city-search"
+            />
+            <button
+              type="submit"
+              class="btn btn-primary mb-2"
+              id="search-button"
+            >
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+
+          <table class="table" id="search-table">
+            <tbody>
+              <tr>
+                <td>Austin</td>
+              </tr>
+              <tr>
+                <td>San Francisco</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+        <div class="col-8" id="dashboard-column">
+          <div class="row" id="current-weather-card">
+            <h3>Atlanta (1/1/2019)</h3>
+            <p>Temperature: 71</p>
+          </div>
+          <div class="row">
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
