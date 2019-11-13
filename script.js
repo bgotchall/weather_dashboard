@@ -66,8 +66,63 @@ $.ajax({
 
                 }
                 console.log(daily_array);
-                
-                
+                todays_date=daily_array[0].dt_txt;
+                todays_date=todays_date.split(" ")[0];
+                todays_date=todays_date.split("-");
+                console.log(todays_date);
+                $("#c1-date").text(todays_date[1]+"/"+todays_date[2]+"/"+todays_date[0]);
+
+                todays_date=daily_array[1].dt_txt;
+                todays_date=todays_date.split(" ")[0];
+                todays_date=todays_date.split("-");
+                console.log(todays_date);
+                $("#c2-date").text(todays_date[1]+"/"+todays_date[2]+"/"+todays_date[0]);
+
+                todays_date=daily_array[2].dt_txt;
+                todays_date=todays_date.split(" ")[0];
+                todays_date=todays_date.split("-");
+                console.log(todays_date);
+                $("#c3-date").text(todays_date[1]+"/"+todays_date[2]+"/"+todays_date[0]);
+
+                todays_date=daily_array[3].dt_txt;
+                todays_date=todays_date.split(" ")[0];
+                todays_date=todays_date.split("-");
+                console.log(todays_date);
+                $("#c4-date").text(todays_date[1]+"/"+todays_date[2]+"/"+todays_date[0]);
+
+                todays_date=daily_array[4].dt_txt;
+                todays_date=todays_date.split(" ")[0];
+                todays_date=todays_date.split("-");
+                console.log(todays_date);
+                $("#c5-date").text(todays_date[1]+"/"+todays_date[2]+"/"+todays_date[0]);
+
+                my_temp=daily_array[0].main.temp;
+                my_temp=Math.round( ((my_temp -273.15) * 9/5 + 32),1)+"°F";
+                 $("#c1-temp").text("Temp: "+my_temp);
+
+                my_temp=daily_array[1].main.temp;
+                my_temp=Math.round( ((my_temp -273.15) * 9/5 + 32),1)+"°F";
+                 $("#c2-temp").text("Temp: "+my_temp);
+
+                 my_temp=daily_array[2].main.temp;
+                my_temp=Math.round( ((my_temp -273.15) * 9/5 + 32),1)+"°F";
+                 $("#c3-temp").text("Temp: "+my_temp);
+
+                 my_temp=daily_array[3].main.temp;
+                my_temp=Math.round( ((my_temp -273.15) * 9/5 + 32),1)+"°F";
+                 $("#c4-temp").text("Temp: "+my_temp);
+
+                 my_temp=daily_array[4].main.temp;
+                my_temp=Math.round( ((my_temp -273.15) * 9/5 + 32),1)+"°F";
+                 $("#c5-temp").text("Temp: "+my_temp);
+
+                 $("#c1-humidity").text("Humidity: "+ daily_array[0].main.humidity);
+                 $("#c2-humidity").text("Humidity: "+ daily_array[1].main.humidity);
+                 $("#c3-humidity").text("Humidity: "+ daily_array[2].main.humidity);
+                 $("#c4-humidity").text("Humidity: "+ daily_array[3].main.humidity);
+                 $("#c5-humidity").text("Humidity: "+ daily_array[4].main.humidity);
+
+
             });
 
 
