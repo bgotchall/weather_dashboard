@@ -42,3 +42,12 @@
     padding:10px;
     border-radius: 3px;
 }
+
+#main_icon{
+    height:50px;
+    width:50px;
+}
+.forecast_icon{
+    height:50px;
+    width:50px;
+}
