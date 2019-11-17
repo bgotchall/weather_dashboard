@@ -11,7 +11,7 @@ $("#todays-date").text("(" + (today.getMonth()+1) +'/'+ today.getDate()+ '/'+tod
 
 var city_to_search = "Austin";
 var queryURL =
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    "http://api.openweathermap.org/data/2.5/weather?q=" +
     city_to_search +
     ",us&appid=" +
     api_key;
@@ -26,7 +26,7 @@ var lon = 0; //longitude from searched city
 
 function update(city) {
     queryURL =
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
+        "http://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         ",us&appid=" +
         api_key;
